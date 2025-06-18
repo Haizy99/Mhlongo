@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>5-Day Weather Forecast</title>
+</head>
+<body>
+ <nav>
+ <ul>
+    <li><a  href="Git resume.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="contacts.html">Contact</a></li>
+    <li><a class="one" href="weather.html">Weather</a></li>
+ </ul>
+ </nav>  
+</ul>
+<div id="forecast">Loading 5-day forecast…</div>
+
+<script>
+const weatherIcons = {
+  0: "☀️",       // Clear sky
+  1: "🌤️",      // Mainly clear
+  2: "⛅",       // Partly cloudy
+  3: "☁️",       // Overcast
+  45: "🌫️",     // Fog
+  48: "🌫️",     // Depositing rime fog
+  51: "🌦️",     // Drizzle: Light
+  53: "🌦️",     // Drizzle: Moderate
+  55: "🌧️",     // Drizzle: Dense
+  61: "🌧️",     // Rain: Slight
+  63: "🌧️",     // Rain: Moderate
+  65: "🌧️",     // Rain: Heavy
+  66: "🌨️",     // Freezing rain: Light
+  67: "🌨️",     // Freezing rain: Heavy
+  71: "🌨️",     // Snow fall: Slight
+  73: "🌨️",     // Snow fall: Moderate
+  75: "❄️",     // Snow fall: Heavy
+  80: "🌦️",     // Rain showers: Slight
+  81: "🌦️",     // Rain showers: Moderate
+  82: "🌧️",     // Rain showers: Violent
+  95: "⛈️",     // Thunderstorm: Slight or moderate
+  96: "⛈️",     // Thunderstorm with hail: Slight
+  99: "⛈️",     // Thunderstorm with hail: Heavy
+};
+
+function getDayName(dateStr) {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString("en-US", { weekday: "long" });
+}
+
+navigator.geolocation.getCurrentPosition(pos => {
+  const { latitude, longitude } = pos.coords;
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=auto`;
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      const days = data.daily.time.slice(0, 5).map((date, i) => {
+        const dayName = getDayName(date);
+        const icon = weatherIcons[data.daily.weathercode[i]] || "❓";
+        const max = data.daily.temperature_2m_max[i];
+        const min = data.daily.temperature_2m_min[i];
+
+        return `
+          <div class="day">
+            <strong>${dayName}</strong>
+            <div class="icon">${icon}</div>
+            <div class="temp">Max: ${max}°C</div>
+            <div class="temp">Min: ${min}°C</div>
+          </div>
+        `;
+      }).join("");
+
+      document.getElementById("forecast").innerHTML = days;
+    })
+    .catch(() => {
+      document.getElementById("forecast").innerHTML = "Unable to load forecast.";
+    });
+});
+</script>
+
+</body>
+</html>
+
+</script>
+</body>
+</html>
