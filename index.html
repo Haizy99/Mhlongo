@@ -1,35 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Git.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zama Mhlongo — QA Automation Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Git.css">
 </head>
 <body>
-     <nav>
- <ul>
-    <li><a class="one" href="Git resume.html">About</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="contacts.html">Contact</a></li>
-    <li><a href="weather.html">Weather</a></li>
- </ul>
- </nav>  
-</ul>
-<h1>ZAMA MHLONGO</h1>
-<img src="zama.jpg">
-<hr>
-<h3> Profile</h3>
-<p>A dedicated and adaptable professional who has recently embarked on a new career in software development, driven by a passion for technology and problem-solving. Ibring a stong work ethic, a willingness to learn, and a detail-orientented mindset to every project i take on.
-With excellent comminication skills and the ability to thrive under pressure, I am commited to growing in this dynamic field while contributing positively to a team. I am eager to apply my developing technical skills in a real wold environment and continue building a successful career in tech. </p>
-<h2>Personal Details</h2>
-<ul>
-    <li>Name: Zama Haizel</li>
-    <li>Surname: Mhlongo</li>
-    <li>Address: 7 Karee Street, Noordwyk, Midrand</li>
-    <li>Email Address: Zamamhlongo95@gmail.com</li>
-    <li>Date of Birth: 27 May 1999</li>
-    <li>Contact Number: 0604316378</li>
-</ul>
+
+<nav>
+  <div class="nav-inner">
+    <div class="brand">zama<span>.mhlongo</span></div>
+    <ul class="nav-links">
+      <li><a href="#about" data-target="about"><span class="dot"></span>about.spec</a></li>
+      <li><a href="#skills" data-target="skills"><span class="dot"></span>skills.spec</a></li>
+      <li><a href="#experience" data-target="experience"><span class="dot"></span>experience.spec</a></li>
+      <li><a href="#contact" data-target="contact"><span class="dot"></span>contact.spec</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ---------- HERO ---------- -->
+<section class="hero" id="top">
+  <div>
+    <div class="terminal">
+      <span class="prompt">$</span> whoami<br>
+      &gt; qa automation engineer, currently debugging a career in tech<span class="cursor"></span>
+    </div>
+    <h1>Zama Mhlongo</h1>
+    <div class="role">QA Test Automation Engineer</div>
+    <p class="tagline">I write the tests that catch what everyone else missed — and I'm building the skills to ship the features too.</p>
+    <div class="hero-cta">
+      <a class="btn primary" href="mailto:Zamamhlongo95@gmail.com">Get in touch</a>
+      <a class="btn ghost" href="#experience">See the work</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <div class="frame">
+      <img src="zama.jpg" alt="Zama Mhlongo">
+    </div>
+  </div>
+</section>
+
+<!-- ---------- ABOUT ---------- -->
+<section id="about">
+  <div class="eyebrow">01 / profile</div>
+  <h2 class="section-title">About</h2>
+  <div class="about-grid">
+    <p>
+      I'm a QA automation engineer who found my way into software development through a love of finding out how
+      things break — and then figuring out how to stop them from breaking again. My day-to-day involves building
+      end-to-end test suites with Playwright, verifying fixes down to the database and API level, and working
+      inside a low-code platform (Shesha) that sits closer to real product code than most testing roles get to.
+      <br><br>
+      I bring a detail-oriented mindset, a strong work ethic, and a genuine curiosity about the systems I test —
+      not just whether they pass, but why they might fail. I'm currently expanding beyond QA into full-stack
+      development, and I'm looking for a team where I can keep growing while helping ship dependable software.
+    </p>
+    <div class="meta-list">
+      <div><span class="key">location</span><span class="val">Midrand, South Africa</span></div>
+      <div><span class="key">email</span><span class="val">Zamamhlongo95@gmail.com</span></div>
+      <div><span class="key">role</span><span class="val">QA Automation Engineer</span></div>
+      <div><span class="key">status</span><span class="val">Open to opportunities</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- SKILLS ---------- -->
+<section id="skills">
+  <div class="eyebrow">02 / capabilities</div>
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>Testing &amp; QA</h3>
+      <ul>
+        <li>End-to-end testing with Playwright</li>
+        <li>Test plan &amp; regression suite design</li>
+        <li>UAT execution &amp; defect documentation</li>
+        <li>API / DB-level bug verification (Swagger, SSMS)</li>
+        <li>Cross-browser debugging</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>Development</h3>
+      <ul>
+        <li>Shesha low-code framework</li>
+        <li>TypeScript form scripting &amp; logic</li>
+        <li>React &amp; Ant Design patterns</li>
+        <li>Next.js, ASP.NET Core (learning)</li>
+        <li>SQL Server &amp; Firebase</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>Tools &amp; Workflow</h3>
+      <ul>
+        <li>Azure DevOps</li>
+        <li>Git — branching, merges, cherry-picks</li>
+        <li>Conventional commit messages</li>
+        <li>Clean PR practices</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- EXPERIENCE ---------- -->
+<section id="experience">
+  <div class="eyebrow">03 / history</div>
+  <h2 class="section-title">Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="when">Current</span>
+      <h3>QA Tester &amp; Automation Engineer</h3>
+      <span class="org">Boxfusion — PD-EPM &amp; PD-Travel Booking projects</span>
+      <ul>
+        <li>Built a Playwright E2E test suite across four spec files covering traveller profiles, requests, operations, and project manager workflows</li>
+        <li>Investigated and verified bug fixes at the UI, API, and database level</li>
+        <li>Diagnosed Ant Design / Shesha rendering quirks and cross-browser flakiness</li>
+        <li>Fixed component-type flag and reporting-tree autopopulate bugs</li>
+        <li>Completed UAT testing and documented findings across multiple EPM modules</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="when">Ongoing</span>
+      <h3>Software Development Learnership</h3>
+      <span class="org">Structured training programme — logbook &amp; unit standards</span>
+      <ul>
+        <li>Building StreamVault, a Netflix-style streaming app (Next.js, ASP.NET Core, SQL Server, Firebase)</li>
+        <li>Completed first EF Core migration and scaffolded core pages &amp; models</li>
+        <li>Applying QA discipline to my own code as I learn to build, not just test</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- CONTACT ---------- -->
+<section id="contact">
+  <div class="contact-box">
+    <h2>Let's talk</h2>
+    <p>Whether it's a role, a project, or just a conversation about testing — I'd love to hear from you.</p>
+    <a class="btn primary" href="mailto:Zamamhlongo95@gmail.com">Zamamhlongo95@gmail.com</a>
+
+    <div class="social-icons">
+      <a href="https://mail.google.com/mail/u/0/?hl=en#inbox?compose=DmwnWrRrlzsMqQtglVfWwVrQRXxGBcjmWBBpGVKSPlCVzNBktQbsVDJHVtjbgztXDFtxvKKnPpqV" aria-label="Email" title="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 7 9-7"/></svg>
+      </a>
+      <a href="https://x.com/Zama98031506" aria-label="X (Twitter)" title="X">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.146 3h3.05l-6.66 7.61L22.4 21h-6.13l-4.8-6.28L5.94 21H2.88l7.12-8.14L2 3h6.28l4.34 5.74L18.146 3Zm-1.07 16.17h1.69L7.02 4.74H5.2l11.876 14.43Z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/zamah_mhlongo/" aria-label="Instagram" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://web.facebook.com/zamour.njomaner" aria-label="Facebook" title="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5.5h-3c-2.2 0-4 1.8-4 4V12H8v3.5h2V21h3.5v-5.5H16l.6-3.5h-3.1V9.6c0-.5.4-.6.5-.6Z"/></svg>
+      </a>
+      <a href="https://wa.me/+27604316378" aria-label="WhatsApp" title="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.1-1.34A10 10 0 1 0 12 2Zm0 18.13a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.03.8.81-2.95-.2-.3A8.13 8.13 0 1 1 12 20.13Zm4.52-6.1c-.25-.12-1.46-.72-1.68-.8-.23-.08-.4-.12-.56.13-.17.24-.65.8-.8.96-.15.17-.3.19-.55.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.3.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.22.9 2.4 1.02 2.57.13.17 1.77 2.7 4.28 3.79.6.26 1.06.41 1.43.53.6.19 1.14.16 1.57.1.48-.07 1.46-.6 1.67-1.18.2-.57.2-1.06.14-1.17-.06-.1-.23-.16-.48-.28Z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Zama Mhlongo — all tests passing</footer>
+
+<script>
+  const links = document.querySelectorAll('.nav-links a');
+  const sections = document.querySelectorAll('section[id]');
+  const seen = new Set();
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.id;
+      const link = document.querySelector(`.nav-links a[data-target="${id}"]`);
+      if (!link) return;
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        seen.add(id);
+      }
+      if (seen.has(id) && !entry.isIntersecting) {
+        link.classList.add('passed');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+
 </body>
 </html>
